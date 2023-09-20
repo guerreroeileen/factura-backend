@@ -12,7 +12,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.example.demo.model.Factura;
-import com.example.demo.reposiry.FacturaRepository;
+import com.example.demo.repository.FacturaRepository;
 
 @Service
 public class FacturaService {
