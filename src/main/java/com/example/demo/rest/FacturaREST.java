@@ -9,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.Valid;
 import java.net.URI;
 import java.util.Date;
 import java.util.List;
@@ -35,7 +34,7 @@ public class FacturaREST {
 		}
 	}
 	
-	@GetMapping (value = "nitreceptor/{id}")
+	@GetMapping ({"nitreceptor/{id}", "nitreceptor/{id}/"})
 	public ResponseEntity<List<Factura> > getFacturasByNITReceptor (@PathVariable("id") String NITReceptor){
 		try {
 			List<Factura> facturaObtenida = facturaService.findByNITReceptor(NITReceptor);
@@ -46,7 +45,7 @@ public class FacturaREST {
 		}
 	}
 	
-	@GetMapping (value = "razonsocialreceptor/{id}")
+	@GetMapping ({"razonsocialreceptor/{id}", "razonsocialreceptor/{id}/"})
 	public ResponseEntity<List<Factura> > getFacturasByrazonSocialReceptor (@PathVariable("id") String razonSocialReceptor){
 		try {
 			List<Factura> facturaObtenida = facturaService.findByrazonSocialReceptor(razonSocialReceptor);
@@ -57,7 +56,7 @@ public class FacturaREST {
 		}
 	}
 	
-	@PostMapping (value = "fechaemision/")
+	@PostMapping ({"fechaemision/", "fechaemision"})
 	public ResponseEntity<List<Factura> > getFacturasByfechaEmision (@RequestBody Date fechaEmision){
 		try {
 			List<Factura> facturaObtenida = facturaService.findByFechaEmision(fechaEmision);

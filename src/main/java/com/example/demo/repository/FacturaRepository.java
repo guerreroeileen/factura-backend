@@ -1,4 +1,4 @@
-package com.example.demo.reposiry;
+package com.example.demo.repository;
 
 import java.util.Date;
 import java.util.List;
