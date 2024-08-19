@@ -10,6 +10,7 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import lombok.Data;
 
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -34,5 +35,5 @@ public class Factura {
 	private Double valorTotal;
     
 	@OneToMany
-	private List <Item> items;
+	private List <Item> items = new ArrayList<>();
 }
